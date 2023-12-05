@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+<img src="{{result.image.url}}" width="100" height="100">
+{{result.name}}<br>
+{{result.desc}}<br>
+<a href="{% url 'movieapp1:update' result.id %}">Update</a>
+<a href="{% url 'movieapp1:delete' result.id %}">delete</a>
+
+{% endblock %}
